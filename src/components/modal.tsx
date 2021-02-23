@@ -44,9 +44,6 @@ const SimpleModal = ({ open }: IProps) => {
 
   return (
     <div>
-      {/* <button type="button" onClick={handleOpen}>
-        Open Modal
-      </button> */}
       <Modal
         open={open}
         aria-labelledby="simple-modal-title"

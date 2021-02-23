@@ -5,8 +5,12 @@ import {
 } from "./token.types";
 import { GetToken } from "../../core/usecases/token.service";
 import { TokenRepositoryImpl } from "../../adapters/repositories/token.implementation";
+import { AnyAction } from "redux";
+import { ThunkDispatch } from "redux-thunk";
 
-export const requestToken = (id: string) => async (dispatch: any) => {
+export const requestToken = (id: string) => async (
+  dispatch: ThunkDispatch<{}, {}, AnyAction>
+) => {
   dispatch({ type: TOKEN_LOAD_REQUEST });
 
   try {
